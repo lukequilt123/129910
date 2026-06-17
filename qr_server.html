@@ -1,0 +1,57 @@
+<!--
+  QR server template.
+  Replace tokens at write-time:
+    British Trust for Ornithology          → brand display name
+    https://lukequilt123.github.io/129910/       → live GitHub Pages URL
+    6m 10s        → "Xm Ys" badge string
+    #001522     → brand dark hex (default #1f2029)
+    #8C9440   → brand accent hex (default #f5c967)
+
+  Defaults work for any brand; override with the redesigned site's real palette
+  so the QR screen feels like part of the same brand world.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Scan to Visit — British Trust for Ornithology</title>
+<style>
+  :root { --dark: #001522; --accent: #8C9440; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    min-height: 100vh; background: var(--dark); color: #fff;
+    text-align: center; padding: 40px;
+  }
+  .eyebrow {
+    font-size: .74rem; letter-spacing: .28em; text-transform: uppercase;
+    color: var(--accent); font-weight: 600;
+  }
+  h1 { font-size: 1.9rem; font-weight: 600; margin: 14px 0 6px; }
+  .card {
+    background: #fff; padding: 28px; border-radius: 8px;
+    margin-top: 32px; box-shadow: 0 30px 60px -20px rgba(0,0,0,.6);
+  }
+  .card img { width: 300px; height: 300px; display: block; }
+  a.live {
+    margin-top: 24px; font-size: 1.05rem; color: var(--accent); word-break: break-all;
+  }
+  p.hint { color: rgba(255,255,255,.6); margin-top: 8px; font-size: .95rem; }
+  .timer {
+    margin-top: 28px; padding: 9px 22px; background: var(--accent); color: var(--dark);
+    font-size: .8rem; letter-spacing: .12em; font-weight: 700;
+    border-radius: 4px; text-transform: uppercase;
+  }
+</style>
+</head>
+<body>
+  <span class="eyebrow">British Trust for Ornithology · Site Redesign</span>
+  <h1>Scan to visit the live site</h1>
+  <div class="card"><img src="qr_code.png" alt="QR Code" /></div>
+  <a class="live" href="https://lukequilt123.github.io/129910/" target="_blank">https://lukequilt123.github.io/129910/</a>
+  <p class="hint">Point your phone camera at the code above</p>
+  <div class="timer">Built in 6m 10s</div>
+</body>
+</html>
